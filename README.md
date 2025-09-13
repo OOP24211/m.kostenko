@@ -13,3 +13,6 @@
 ```bash
 g++ -o parser src/lab0_parser.cpp
 parser input.txt output.csv
+
+## История изменений
+- [12.09.25] Первоначальная версия программы
