@@ -14,10 +14,9 @@ private:
 public:
     word_frequency_analyzer();
 
-    void add_word(std::string& current_word);
+    void add_word(const std::string& current_word);
     
-    double get_word_freq(int counter);
-
+    double get_word_freq(int counter) const;
 
     std::vector<std::pair<int, std::string>> get_sorted_results();
 };
