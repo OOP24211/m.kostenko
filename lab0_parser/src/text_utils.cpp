@@ -5,7 +5,7 @@ namespace text_utils {
         const unsigned char uc = static_cast<unsigned char>(sym);
         if ('A' <= uc && uc <= 'Z') return uc + 32;
         if (192 <= uc && uc <= 223) return uc + 32;
-        if (uc == 168) return 184;
+        if (uc == 168) return static_cast<char>(184);
         return uc;
     }
 
