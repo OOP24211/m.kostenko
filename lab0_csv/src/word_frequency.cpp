@@ -3,6 +3,12 @@
 #include <fstream>
 #include <iostream>
 
+bool comparePairs(const std::pair<std::string, int>& a,
+                  const std::pair<std::string, int>& b)
+{
+    return a.second > b.second;
+}
+
 FrequencyCounter::FrequencyCounter()
 {
     totalWords = 0;
@@ -34,11 +40,7 @@ void FrequencyCounter::writeCSV(const std::string& filename)
         sorted.push_back(*it);
     }
 
-    sorted.sort([](const std::pair<std::string, int>& a,
-                   const std::pair<std::string, int>& b)
-    {
-        return a.second > b.second;
-    });
+    sorted.sort(comparePairs);
 
     file << "Word,Frequency,Frequency(%)\n";
 
