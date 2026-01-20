@@ -1,0 +1,10 @@
+build/
+bin/
+obj/
+out/
+Debug/
+Release/
+
+sound/build/
+sound/*.wav
+sound/audio/
